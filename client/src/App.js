@@ -10,7 +10,7 @@ class App extends Component {
   componentDidMount = () => {
     // Make sure to change the (localhost) on the line bellow 
     // to the public DNS of your EC2 instance
-    axios.get(`http://localhost:4000/sayHello`)
+    axios.get(`http://ec2-54-162-9-187.compute-1.amazonaws.com/sayHello`)
     .then(res => {
       const dataFromServer = res.data;
       this.setState({ data: dataFromServer });
